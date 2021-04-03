@@ -11,7 +11,8 @@ app.use(express.json());
 app.use(session({
   secret: SESSION_SECRET,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+   
 }))
 
 // ==== REMOVE!!!! ====
@@ -36,5 +37,5 @@ app.post('/api/budget-data/purchase', budget.purchase);
 app.delete('/api/budget-data/purchase/:id', budget.remove)
 
 app.listen(SERVER_PORT, () => {
-  console.log(`Server running on port ${SERVER_PORT}`)
+  console.log(`Server bumping on port ${SERVER_PORT}`)
 })
